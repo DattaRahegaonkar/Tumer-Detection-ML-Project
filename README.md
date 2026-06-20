@@ -143,12 +143,29 @@ npm run dev
 
 ---
 
-## API Endpoints
+## Docker Deployment
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/predict` | Make tumor prediction |
-| GET | `/health` | Health check endpoint |
+### 1. MongoDB Container
+
+```
+docker run -d --name mongodb -p 27017:27017 --network ml-network -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+```
+
+### 2. Backend Container
+
+```
+docker build -t ml-backend ./backend
+
+docker run -d --name ml-backend -p 5000:5000 --network ml-network ml-backend
+```
+
+### 3. Frontend Container
+
+```
+docker build -t ml-frontend ./frontend
+
+docker run -d --name ml-frontend -p 3000:3000 --network ml-network ml-frontend
+```
 
 ---
 
