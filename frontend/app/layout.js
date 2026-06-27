@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Tumor Detection",
-  description: "AI-Powered Breast Cancer Detection",
+  title: "Breast Tumor Detection System",
+  description: "Breast Tumor Detection System using Machine Learning - AI-Powered Breast Cancer Detection",
 };
 
 export default function RootLayout({ children }) {

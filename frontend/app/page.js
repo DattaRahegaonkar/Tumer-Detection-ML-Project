@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (status === "unauthenticated") router.push("/login");
+    if (status === "unauthenticated") router.push("/home");
   }, [status, router]);
 
   useEffect(() => {

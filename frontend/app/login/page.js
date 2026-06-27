@@ -31,6 +31,16 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+        <Link 
+          href="/home" 
+          className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium mb-6 transition-colors"
+        >
+          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </Link>
+        
         <div className="text-center mb-8">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-xl shadow-lg inline-block mb-4">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
