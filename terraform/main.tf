@@ -59,8 +59,8 @@ resource aws_route_table_association tf-public-route-table-association {
 # Terraform configuration for creating an EC2 instance in AWS.
 
 resource aws_key_pair tf-key {
-    key_name   = "tf-ml-key"
-    public_key = file("tf-ml-key.pub")
+    key_name   = "tf-server-key"
+    public_key = file("tf-server-key.pub")
 }
 
 resource aws_security_group tf-sg {
